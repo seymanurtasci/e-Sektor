@@ -1,0 +1,81 @@
+﻿@using eSektorEntities
+@model eSektorEntities.Task
+
+@{
+	ViewBag.Title = "PostTask";
+}
+
+<h2>PostTask</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<form>
+		<div class="container">
+			<div class="input-group col-md-6" style="padding-left: 5px;">
+				<div class="input-group input-group-sm mb-0 mt-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-sm">Başlık</span>
+					</div>
+					<input type="text" id="TaskTitle" class="form-control" name="TaskTitle" aria-label="Sizing example input"
+						   aria-describedby="inputGroup-sizing-sm">
+				</div>
+
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">İş Tanımı</span>
+					</div>
+					<textarea class="form-control" id="Descript" name="Description" aria-label="With textarea"></textarea>
+				</div>
+			</div>
+
+			<label class="col-lg-2 col-form-label">Sektör Bilgisi</label>
+			<div class="col-lg-3">
+				<select name="Sektor" id="Sektor" class="form-control m-input" required>
+					@foreach (var s in (List<Speciality>)ViewBag.List)
+					{
+						<option value="">@s.Name</option>
+					}
+				</select>
+			</div>
+			<br>
+			<label class="col-lg-2 col-form-label">Ödeme Şekli</label>
+			<div class="col-lg-3">
+				<select name="PaymentMethodId" id="payment" class="form-control m-input" required>
+					@foreach (var method in (List<PaymentMethod>)ViewBag.PaymentMethods)
+					{
+						<option value="@method.PaymentMethodId">@method.Type</option>
+					}
+				</select>
+			</div>
+
+			<div class="ml-1" style="padding-left:5px">
+				<label>İlan Başlangıç Tarihi</label>
+				<label style="margin-left: 150px">İlan Bitiş Tarihi</label>
+			</div>
+			<div class="ml-1" style="padding-left:5px">
+
+				<input type="date" name="StartDateTime">
+				<input type="date" name="EndDateTime" style="margin-left: 120px">
+			</div>
+
+			<button type="submit" value="create" class="btn btn-success ml-2 pull-right" style="margin-top: 15px">İlana Çık</button>
+		</div>
+	</form>
+	
+</body>
+
+</html>

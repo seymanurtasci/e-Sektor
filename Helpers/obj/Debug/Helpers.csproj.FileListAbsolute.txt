@@ -1,0 +1,6 @@
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Helpers\bin\Debug\Helpers.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Helpers\bin\Debug\Helpers.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Helpers\obj\Debug\Helpers.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Helpers\obj\Debug\Helpers.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Helpers\obj\Debug\Helpers.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Helpers\obj\Debug\Helpers.pdb

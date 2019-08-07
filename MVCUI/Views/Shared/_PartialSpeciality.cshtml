@@ -1,0 +1,7 @@
+﻿@using eSektorEntities
+@model List<Speciality>
+
+@foreach (var speciality in Model)
+{
+	<a href="/Task/GetTasksId/?id=@speciality.SpecialityId" class="list-group-item list-group-item-action">@speciality.Name</a>
+}

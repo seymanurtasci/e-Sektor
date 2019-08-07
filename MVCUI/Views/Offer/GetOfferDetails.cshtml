@@ -1,0 +1,61 @@
+﻿@using eSektorEntities
+@model List<OfferDetail>
+
+@{
+	ViewBag.Title = "Teklif Detayları";
+}
+
+<h2>Teklif Detayları</h2>
+
+
+<table class="table">
+	<tr>
+		
+		<th>
+			@Html.DisplayName("Marka")
+		</th>
+		<th>
+			@Html.DisplayName("Model")
+		</th>
+		<th>
+			@Html.DisplayName("Birim")
+		</th>
+		<th>
+			@Html.DisplayName("Tanım")
+		</th>
+		<th>
+			@Html.DisplayName("Birim Ücret")
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			
+			<td>
+				@Html.DisplayFor(modelItem => item.Brand)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Model)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.QuantityUnit)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Description)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.UnitPrice)
+			</td>
+			
+		</tr>
+	}
+</table>
+<div class="row">
+	<label>İş İçin Teklif Edilen Tutar: </label>
+	<input class="alert-danger" disabled value="@ViewBag.fee" />
+	@Html.ActionLink("Teklifi Kabul Et", "#", "#", null, new { @class = "btn btn-danger" })
+</div>
+
+

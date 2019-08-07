@@ -1,0 +1,23 @@
+﻿@using eSektorEntities
+@model IQueryable<ICollection<eSektorEntities.Task>>
+
+@{
+	ViewBag.Title = "GetTasksId";
+}
+
+<link href="~/Content/_PartialCard.css" rel="stylesheet" />
+<link href="~/Content/GetTasks.css" rel="stylesheet" />
+
+
+@foreach (var tasks in Model)
+{
+	foreach(var task in tasks){
+		@Html.Partial("_PartialCard", task)
+	}
+
+}
+
+@section Speciality
+{
+	@Html.Action("GetSpeciality", "Speciality")
+}

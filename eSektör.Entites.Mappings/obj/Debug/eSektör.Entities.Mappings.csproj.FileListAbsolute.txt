@@ -1,0 +1,16 @@
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\eSektör.Entites.Mappings.dll.config
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\eSektör.Entites.Mappings.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\eSektör.Entites.Mappings.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\eSektorEntities.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\CommonType.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\eSektorEntities.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\bin\Debug\CommonType.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\obj\Debug\eSektör.Entities.Mappings.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\obj\Debug\eSektör.Entities.Mappings.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\obj\Debug\eSektör.Entities.Mappings.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\obj\Debug\eSektör.Entites.Mappings.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektör.Entites.Mappings\obj\Debug\eSektör.Entites.Mappings.pdb

@@ -1,0 +1,6 @@
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\CommonType\bin\Debug\CommonType.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\CommonType\bin\Debug\CommonType.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\CommonType\obj\Debug\CommonType.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\CommonType\obj\Debug\CommonType.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\CommonType\obj\Debug\CommonType.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\CommonType\obj\Debug\CommonType.pdb

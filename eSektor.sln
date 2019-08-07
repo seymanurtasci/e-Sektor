@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonType", "CommonType\CommonType.csproj", "{E2309D10-4B7C-4AF3-9D37-F900990AF78D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{AF691675-13B3-42A9-8274-0EC982D5FDA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{DF3EE0FD-CB35-4D37-ABFC-861E84DFDF46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{484C9B5B-8EE1-4964-8978-D9B17850E993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSektor.Entities", "eSektorEntities\eSektor.Entities.csproj", "{70E813C7-3276-404E-A7FB-21A41FEA5096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSektör.Entities.Mappings", "eSektör.Entites.Mappings\eSektör.Entities.Mappings.csproj", "{77520F70-3EB8-4A7F-B7AD-2914AB3A0BBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSektör.Dal", "eSektör.Dal\eSektör.Dal.csproj", "{CD88D037-A942-409D-9005-B0E58D9EE82A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E2309D10-4B7C-4AF3-9D37-F900990AF78D} = {E2309D10-4B7C-4AF3-9D37-F900990AF78D}
+		{AF691675-13B3-42A9-8274-0EC982D5FDA1} = {AF691675-13B3-42A9-8274-0EC982D5FDA1}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{DD7077C0-7397-47E4-848F-A8EB592CFA8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Abstract", "BLL.Abstract\BLL.Abstract.csproj", "{B5EAFF77-E9C2-4EE0-88D6-C27B1ABE01A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.IOC.Module", "BLL.IOC.Module\BLL.IOC.Module.csproj", "{76751BF9-CD7F-44A9-B04A-7E28D94541FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A5242693-5BD7-49B8-A378-90F899A2DEE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{BD08095F-20E5-4BEC-8C5B-2B63956E6BEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCUI", "MVCUI\MVCUI.csproj", "{47171E6D-331F-4804-B9AF-BDDCA8C652D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2309D10-4B7C-4AF3-9D37-F900990AF78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2309D10-4B7C-4AF3-9D37-F900990AF78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2309D10-4B7C-4AF3-9D37-F900990AF78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2309D10-4B7C-4AF3-9D37-F900990AF78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF691675-13B3-42A9-8274-0EC982D5FDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF691675-13B3-42A9-8274-0EC982D5FDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF691675-13B3-42A9-8274-0EC982D5FDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF691675-13B3-42A9-8274-0EC982D5FDA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3EE0FD-CB35-4D37-ABFC-861E84DFDF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3EE0FD-CB35-4D37-ABFC-861E84DFDF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3EE0FD-CB35-4D37-ABFC-861E84DFDF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3EE0FD-CB35-4D37-ABFC-861E84DFDF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E813C7-3276-404E-A7FB-21A41FEA5096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E813C7-3276-404E-A7FB-21A41FEA5096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E813C7-3276-404E-A7FB-21A41FEA5096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E813C7-3276-404E-A7FB-21A41FEA5096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77520F70-3EB8-4A7F-B7AD-2914AB3A0BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77520F70-3EB8-4A7F-B7AD-2914AB3A0BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77520F70-3EB8-4A7F-B7AD-2914AB3A0BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77520F70-3EB8-4A7F-B7AD-2914AB3A0BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD88D037-A942-409D-9005-B0E58D9EE82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD88D037-A942-409D-9005-B0E58D9EE82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD88D037-A942-409D-9005-B0E58D9EE82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD88D037-A942-409D-9005-B0E58D9EE82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EAFF77-E9C2-4EE0-88D6-C27B1ABE01A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EAFF77-E9C2-4EE0-88D6-C27B1ABE01A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EAFF77-E9C2-4EE0-88D6-C27B1ABE01A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EAFF77-E9C2-4EE0-88D6-C27B1ABE01A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76751BF9-CD7F-44A9-B04A-7E28D94541FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76751BF9-CD7F-44A9-B04A-7E28D94541FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76751BF9-CD7F-44A9-B04A-7E28D94541FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76751BF9-CD7F-44A9-B04A-7E28D94541FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5242693-5BD7-49B8-A378-90F899A2DEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5242693-5BD7-49B8-A378-90F899A2DEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5242693-5BD7-49B8-A378-90F899A2DEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5242693-5BD7-49B8-A378-90F899A2DEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47171E6D-331F-4804-B9AF-BDDCA8C652D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47171E6D-331F-4804-B9AF-BDDCA8C652D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47171E6D-331F-4804-B9AF-BDDCA8C652D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47171E6D-331F-4804-B9AF-BDDCA8C652D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70E813C7-3276-404E-A7FB-21A41FEA5096} = {484C9B5B-8EE1-4964-8978-D9B17850E993}
+		{77520F70-3EB8-4A7F-B7AD-2914AB3A0BBE} = {484C9B5B-8EE1-4964-8978-D9B17850E993}
+		{CD88D037-A942-409D-9005-B0E58D9EE82A} = {484C9B5B-8EE1-4964-8978-D9B17850E993}
+		{B5EAFF77-E9C2-4EE0-88D6-C27B1ABE01A5} = {DD7077C0-7397-47E4-848F-A8EB592CFA8F}
+		{76751BF9-CD7F-44A9-B04A-7E28D94541FB} = {DD7077C0-7397-47E4-848F-A8EB592CFA8F}
+		{A5242693-5BD7-49B8-A378-90F899A2DEE8} = {DD7077C0-7397-47E4-848F-A8EB592CFA8F}
+		{47171E6D-331F-4804-B9AF-BDDCA8C652D3} = {BD08095F-20E5-4BEC-8C5B-2B63956E6BEB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38EFDB51-F5BD-4EC3-B8BE-326863258BF2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/esektor
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CommonType\\CommonType.csproj
+		SccProjectName1 = CommonType
+		SccLocalPath1 = CommonType
+		SccProjectUniqueName2 = Core\\Core.csproj
+		SccProjectName2 = Core
+		SccLocalPath2 = Core
+		SccProjectUniqueName3 = eSektorEntities\\eSektor.Entities.csproj
+		SccProjectTopLevelParentUniqueName3 = eSektor.sln
+		SccProjectName3 = eSektorEntities
+		SccLocalPath3 = eSektorEntities
+		SccProjectUniqueName4 = eSektör.Dal\\eSektör.Dal.csproj
+		SccProjectTopLevelParentUniqueName4 = eSektor.sln
+		SccProjectName4 = eSektör.Dal
+		SccLocalPath4 = eSektör.Dal
+		SccProjectUniqueName5 = eSektör.Entites.Mappings\\eSektör.Entities.Mappings.csproj
+		SccProjectTopLevelParentUniqueName5 = eSektor.sln
+		SccProjectName5 = eSektör.Entites.Mappings
+		SccLocalPath5 = eSektör.Entites.Mappings
+		SccProjectUniqueName6 = Helpers\\Helpers.csproj
+		SccProjectName6 = Helpers
+		SccLocalPath6 = Helpers
+		SccProjectUniqueName7 = BLL.Abstract\\BLL.Abstract.csproj
+		SccProjectTopLevelParentUniqueName7 = eSektor.sln
+		SccProjectName7 = BLL.Abstract
+		SccLocalPath7 = BLL.Abstract
+		SccProjectUniqueName8 = BLL.IOC.Module\\BLL.IOC.Module.csproj
+		SccProjectTopLevelParentUniqueName8 = eSektor.sln
+		SccProjectName8 = BLL.IOC.Module
+		SccLocalPath8 = BLL.IOC.Module
+		SccProjectUniqueName9 = BLL\\BLL.csproj
+		SccProjectTopLevelParentUniqueName9 = eSektor.sln
+		SccProjectName9 = BLL
+		SccLocalPath9 = BLL
+		SccProjectUniqueName10 = MVCUI\\MVCUI.csproj
+		SccProjectTopLevelParentUniqueName10 = eSektor.sln
+		SccProjectName10 = MVCUI
+		SccLocalPath10 = MVCUI
+	EndGlobalSection
+EndGlobal

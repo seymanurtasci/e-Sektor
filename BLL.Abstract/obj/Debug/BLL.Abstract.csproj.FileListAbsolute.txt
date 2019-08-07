@@ -1,0 +1,11 @@
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\bin\Debug\BLL.Abstract.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\bin\Debug\BLL.Abstract.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\bin\Debug\CommonType.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\bin\Debug\eSektorEntities.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\bin\Debug\CommonType.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\bin\Debug\eSektorEntities.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\obj\Debug\BLL.Abstract.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\obj\Debug\BLL.Abstract.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\obj\Debug\BLL.Abstract.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\obj\Debug\BLL.Abstract.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\BLL.Abstract\obj\Debug\BLL.Abstract.pdb

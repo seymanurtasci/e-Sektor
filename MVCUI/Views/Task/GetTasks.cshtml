@@ -1,0 +1,23 @@
+﻿@using eSektorEntities
+@model List<eSektorEntities.Task>
+
+@{
+	ViewBag.Title = "GetTasks";
+}
+
+<link href="~/Content/_PartialCard.css" rel="stylesheet" />
+<link href="~/Content/GetTasks.css" rel="stylesheet" />
+
+
+@foreach (var task in Model)
+{
+	@Html.Partial("_PartialCard", task)
+}
+
+@section Speciality
+{
+	@Html.Action("GetSpeciality", "Speciality")
+}
+
+
+

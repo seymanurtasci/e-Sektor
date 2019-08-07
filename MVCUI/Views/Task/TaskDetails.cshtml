@@ -1,0 +1,21 @@
+﻿@model MVCUI.Models.TaskMemberVM
+@{
+	ViewBag.Title = "TaskDetails";
+}
+
+<link href="~/Content/TaskDetails.css" rel="stylesheet" />
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <p id="member">@Model.CompanyName</p>
+        @Html.ActionLink("Teklif Ver", "Add","Offer", new { id = Model.TaskId }, new { @class="btn btn-danger" })
+    </div>
+</div>
+<div class="card">
+	<div class="card-body">
+		<h3>@Model.TaskTitle</h3>
+		<p>@Model.Description</p>
+		<p><strong>Başlangıç Tarihi :</strong>@Model.StartDatetime</p>
+		<p><strong>Bitiş Tarihi :</strong>@Model.EndDatetime</p>
+	</div>
+</div>

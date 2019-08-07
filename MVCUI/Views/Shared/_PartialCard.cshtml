@@ -1,0 +1,11 @@
+﻿@model eSektorEntities.Task
+
+<div class="col-sm-3">
+	<div class="card">
+		<div class="card-body">
+			<h3 class="card-title">@Model.TaskTitle</h3>
+			<p class="card-text">@Model.Description</p>
+			<a href="/Task/TaskDetails/?id=@Model.TaskId" class="btn btn-danger">İncele</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,280 @@
+﻿@model MVCUI.Models.OfferOfferDetailVM
+@using CommonType.Enums
+@{
+    ViewBag.Title = "Teklif Yap";
+}
+
+<link href="~/Content/OfferAdd.css" rel="stylesheet" />
+
+@if (ViewBag.SonucState == ResultState.Success)
+{
+    <div class="alert alert-success" role="alert">
+        Teklif başarıyla eklendi!
+    </div>
+    <script></script>
+}
+else if (ViewBag.SonucState == ResultState.Error)
+{
+    <div class="alert alert-danger" role="alert">
+        Bir hata oluştu!
+    </div>
+}
+<h2>Teklif Yap</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Offer.Fee, htmlAttributes: new { @class = "control-label text-left col-sm-1" })
+            <div class="col-sm-11 ">
+                @Html.EditorFor(model => model.Offer.Fee, new { htmlAttributes = new { @class = "form-control col-sm-12" } })
+                @Html.ValidationMessageFor(model => model.Offer.Fee, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Offer.Detail, htmlAttributes: new { @class = "control-label text-left col-sm-1" })
+            <div class="col-sm-11">
+                @Html.EditorFor(model => model.Offer.Detail, new { htmlAttributes = new { @class = "form-control text-left col-sm-11" } })
+                @Html.ValidationMessageFor(model => model.Offer.Detail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Editable table -->
+        <div class="card">
+            <div class="card-body">
+                <div id="table" class="table-editable">
+                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Marka</th>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Açıklama</th>
+                                <th class="text-center">Birim</th>
+                                <th class="text-center">Miktar </th>
+                                <th class="text-center">Birim Fiyat</th>
+                                <th class="text-center">Toplam Fiyat</th>
+                                <th class="text-center">
+                                    <span class="table-add">
+                                        <a href="#!" class="text-success">
+                                            <i class="fas fa-plus fa-2x"
+                                               aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="pt-3-half">
+                                    @Html.EditorFor(model => model.OfferDetails[0].Brand, new { htmlAttributes = new { @class = "form-control", id = "brand1" } })
+                                </td>
+
+                                <td class="pt-3-half">
+                                    @Html.EditorFor(model => model.OfferDetails[0].Model, new { htmlAttributes = new { @class = "form-control", id = "model1" } })
+                                </td>
+                                <td class="pt-3-half">
+                                    @Html.EditorFor(model => model.OfferDetails[0].Description, new { htmlAttributes = new { @class = "form-control", id = "details1" } })
+                                </td>
+                                <td class="pt-3-half">
+                                    @Html.EnumDropDownListFor(model => model.OfferDetails[0].UnitEnum, htmlAttributes: new { @class = "form-control", id = "unit1" })
+
+                                </td>
+                                <td class="pt-3-half">
+                                    @Html.EditorFor(model => model.OfferDetails[0].QuantityUnit, new { htmlAttributes = new { @class = "form-control quantity", id = "quantity1" } })
+                                </td>
+                                <td class="pt-3-half">
+                                    @Html.EditorFor(model => model.OfferDetails[0].UnitPrice, new { htmlAttributes = new { @class = "form-control unitPrice", id = "unitPrice1" } })
+                                </td>
+                                <td class="pt-3-half toplam" id="toplam1"></td>
+                                <td>
+                                    <span class="table-remove">
+                                        <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">SİL</button>
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="validation-area">
+            @Html.ValidationMessageFor(model => model.OfferDetails[0].Brand, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.OfferDetails[0].Model, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.OfferDetails[0].Description, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.OfferDetails[0].UnitEnum, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.OfferDetails[0].QuantityUnit, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.OfferDetails[0].UnitPrice, "", new { @class = "text-danger" })
+        </div>
+        <!-- Editable table -->
+        <p class="font-weight-bold d-inline">Genel Toplam: <span id="genelToplam"></span></p>
+        <button class="btn btn-primary float-right d-inline" style="margin-bottom:5px">TEKLİF YAP</button>
+    </div>
+}
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
+
+    var count = 1;
+    const $tableID = $('#table');
+    const $BTN = $('#export-btn');
+    const $EXPORT = $('#export');
+    $(document).ready(function () {
+        window.sum = function() {
+            var sum = 0;
+            $(".toplam").each(function () {
+                var row = parseInt($(this).text(), 10);
+                if (!isNaN(row) && row !== "") {
+                    sum += row;
+                }
+            });
+            var generalSum;
+            var fee = $("#Offer_Fee").val();
+            if (!isNaN(fee) && fee !== "") {
+                generalSum = sum + parseInt(fee, 10);
+            }
+            else {
+                generalSum = sum;
+            }
+            $("#genelToplam").text(generalSum);
+        };
+    });
+    $('.table-add').on('click', 'i', () => {
+        
+        const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
+        $clone.find("#quantity" + count).attr("id", "quantity" + ++count).attr("name", "OfferDetails[" + (count - 1) + "].QuantityUnit").val("");
+        $clone.find("#unitPrice" + (count - 1)).attr("id", "unitPrice" + count).attr("name", "OfferDetails[" + (count - 1) + "].UnitPrice").val("");
+        $clone.find("#total" + (count - 1)).attr("id", "total" + count).text("");
+
+        $clone.find("#brand" + (count - 1)).attr("id", "brand" + count).attr("name", "OfferDetails[" + (count - 1) + "].Brand").val("");
+        $clone.find("#model" + (count - 1)).attr("id", "model" + count).attr("name", "OfferDetails[" + (count - 1) + "].Model").val("");
+        $clone.find("#details" + (count - 1)).attr("id", "details" + count).attr("name", "OfferDetails[" + (count - 1) + "].Description").val("");
+        $clone.find("#unit" + (count - 1)).attr("id", "unit" + count).attr("name", "OfferDetails[" + (count - 1) + "].UnitEnum");
+
+        $tableID.find('table').append($clone);
+        $("#validation-area").append("<span class='field-validation-valid text-danger' data-valmsg-for='OfferDetails["+ (count - 1) +"].Brand' data-valmsg-replace='true'></span>");
+        $("#validation-area").append("<span class='field-validation-valid text-danger' data-valmsg-for='OfferDetails[" + (count - 1) + "].Model' data-valmsg-replace='true'></span>")
+        $("#validation-area").append("<span class='field-validation-valid text-danger' data-valmsg-for='OfferDetails[" + (count - 1) + "].Description' data-valmsg-replace='true'></span>");
+        $("#validation-area").append("<span class='field-validation-valid text-danger' data-valmsg-for='OfferDetails[" + (count - 1) + "].UnitEnum' data-valmsg-replace='true'></span>");
+        sum();
+        
+    });
+
+    $tableID.on('click', '.table-remove', function () {
+
+        if ($tableID.find('tbody tr').length === 1) {
+            return;
+        }
+        else {
+            $(this).parents('tr').detach();
+
+            sum();
+        }
+    });
+
+    $tableID.on('click', '.table-up', function () {
+
+        const $row = $(this).parents('tr');
+
+        if ($row.index() === 1) {
+            return;
+        }
+
+        $row.prev().before($row.get(0));
+    });
+
+    $tableID.on('click', '.table-down', function () {
+
+        const $row = $(this).parents('tr');
+        $row.next().after($row.get(0));
+    });
+
+    // A few jQuery helpers for exporting only
+    jQuery.fn.pop = [].pop;
+    jQuery.fn.shift = [].shift;
+
+    $BTN.on('click', () => {
+
+        const $rows = $tableID.find('tr:not(:hidden)');
+        const headers = [];
+        const data = [];
+
+        // Get the headers (add special header logic here)
+        $($rows.shift()).find('th:not(:empty)').each(function () {
+
+            headers.push($(this).text().toLowerCase());
+        });
+
+        // Turn all existing rows into a loopable array
+        $rows.each(function () {
+            const $td = $(this).find('td');
+            const h = {};
+
+            // Use the headers from earlier to name our hash keys
+            headers.forEach((header, i) => {
+
+                h[header] = $td.eq(i).text();
+            });
+
+            data.push(h);
+        });
+
+        // Output the result
+        $EXPORT.text(JSON.stringify(data));
+    });
+
+    $(function totalCalc() {
+        $(".quantity").add(".unitPrice").add("#Offer_Fee").on("keyup", function () {
+
+            var trigger;
+            if ($(this).hasClass("quantity")) {
+                trigger = 1;
+            }
+            else if ($(this).hasClass("unitPrice")) {
+                trigger = 2;
+            }
+            else if ($(this).is("#Offer_Fee")) {
+                trigger = 3;
+            }
+            var one = parseInt($(this).val(), 10);
+            var two;
+            if (trigger == 1) {
+                 two = parseInt($(this).parent().next().children().val(), 10);
+            }
+            else if (trigger == 2) {
+                two = parseInt($(this).parent().prev().children().val(), 10);
+            }
+
+            if ((isNaN(one) || isNaN(two)) && (trigger == 1 || trigger == 2)) {
+                if (trigger == 1) {
+                    $(this).parent().next().next().text("");
+                }
+                else if (trigger == 2) {
+                    $(this).parent().next().text("");
+                }
+            }
+            
+            if (trigger == 1 && !isNaN(one) && !isNaN(two)) {
+                $(this).parent().next().next().text(one * two);
+            }
+            else if (trigger == 2 && !isNaN(one) && !isNaN(two)) {
+                $(this).parent().next().text(one * two);
+            }
+                
+            sum();
+        });
+    });
+    
+
+</script>

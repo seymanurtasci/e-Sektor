@@ -1,0 +1,9 @@
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\bin\Debug\eSektorEntities.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\bin\Debug\eSektorEntities.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\bin\Debug\CommonType.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\bin\Debug\CommonType.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\obj\Debug\eSektor.Entities.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\obj\Debug\eSektor.Entities.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\obj\Debug\eSektor.Entities.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\obj\Debug\eSektorEntities.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\eSektorEntities\obj\Debug\eSektorEntities.pdb

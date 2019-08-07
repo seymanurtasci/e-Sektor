@@ -1,0 +1,26 @@
+﻿#button {
+    position: relative;
+    left: 30%;
+    top: -20px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.jumbotron {
+    margin-top: -1%;
+    height: 100px;
+}
+
+.card {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#member {
+    display: inline;
+    position: relative;
+    left: -10%;
+    top: -20px;
+}

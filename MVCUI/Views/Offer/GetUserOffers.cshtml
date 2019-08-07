@@ -1,0 +1,48 @@
+﻿@model List<eSektorEntities.Offers>
+
+@{
+    ViewBag.Title = "Tekliflerim";
+}
+
+<h2>Tekliflerim</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => Model[0].Fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model[0].Detail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model[0].CancellationReason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model[0].IsCancelled)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Detail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CancellationReason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsCancelled)
+        </td>
+        <td>
+            @Html.ActionLink("Güncelle", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Detaylar", "Details", new {  id=item.OfferId }) |
+            @Html.ActionLink("Sil", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

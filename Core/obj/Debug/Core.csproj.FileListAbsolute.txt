@@ -1,0 +1,14 @@
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\Core.dll.config
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\Core.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\Core.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\CommonType.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\CommonType.pdb
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\obj\Debug\Core.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\obj\Debug\Core.dll
+C:\Users\LENOVO\Desktop\e-Sektor\e-Sektor\eSektor\Core\obj\Debug\Core.pdb
